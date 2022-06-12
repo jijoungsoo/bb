@@ -4,15 +4,17 @@ import './App.css';
 import Grid from '@toast-ui/react-grid'
 import "tui-grid/dist/tui-grid.css";
 import {popupRenderer} from './popupRenderer'
+import {onePopupRenderer} from './onePopupRenderer'
 
 function App() {
     const columns:any = [ 
-        {header: '사용자UID',name: 'USER_UID',width: 200,align : 'right',  sortable : true,resizable: true,sortingType: 'desc',  editor: 'text' ,renderer:popupRenderer}
+        {header: 'REACT',name: 'REACT',width: 200,align : 'right',  sortable : true,resizable: true,sortingType: 'desc',  editor: 'text' ,renderer:popupRenderer},
+        {header: '순수',name: 'PURE',width: 200,align : 'right',  sortable : true,resizable: true,sortingType: 'desc',  editor: 'text' ,renderer:onePopupRenderer}
     ];
 
     const data= [ 
-        {USER_UID :'aaa'},
-        {USER_UID :'aaa'},
+        {REACT :'aaa'},
+        {PURE :'aaa'},
     ];
 
   return (
